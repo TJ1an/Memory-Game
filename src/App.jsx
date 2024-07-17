@@ -23,20 +23,20 @@ function App() {
   }
 
   function generateRandomId() {
-    const ids = new Set(); // Using a Set to avoid duplicates
-    const numIds = 20; // Number of IDs you want to generate
-    const maxId = 500; // Assuming Pokemon IDs range from 1 to 500
+    const ids = new Set(); 
+    const numIds = 20; 
+    const maxId = 500; 
   
     while (ids.size < numIds) {
-      const id = Math.floor(Math.random() * maxId) + 1; // Generate a random ID
-      ids.add(id); // Add the ID to the Set (automatically avoids duplicates)
+      const id = Math.floor(Math.random() * maxId) + 1; 
+      ids.add(id); 
     }
   
-    return Array.from(ids); // Convert Set back to an array and return
+    return Array.from(ids); 
   }
 
   function shuffle(array) {
-    // Creating a shallow copy of the array before shuffling
+
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
